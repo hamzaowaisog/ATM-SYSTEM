@@ -16,7 +16,8 @@ public class FundsTransfer implements ActionListener {
         new FundsTransfer(1000, 10001, 1234, "saving");
     }
     JButton b1,b2,b3;
-    JFormattedTextField txt1,txt2;
+    JFormattedTextField txt2;
+    JTextField txt1;
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
@@ -24,8 +25,8 @@ public class FundsTransfer implements ActionListener {
     String curdate;
     JFrame jf;
     String actype;
-    NumberFormat format,format1;
-    NumberFormatter formatter,formatter1;
+    NumberFormat format1;
+    NumberFormatter formatter1;
 
     FundsTransfer(int atmno, int acno, int pno, String actype){
 
@@ -34,18 +35,10 @@ public class FundsTransfer implements ActionListener {
         this.pno = pno;
         this.actype = actype;
 
-        format = NumberFormat.getInstance();
-        formatter = new NumberFormatter(format);
-        formatter.setValueClass(Integer.class);
-        formatter.setMinimum(-1);
-        formatter.setMaximum(Integer.MAX_VALUE);
-        formatter.setAllowsInvalid(false);
-        formatter.setCommitsOnValidEdit(true);
-
         format1 = NumberFormat.getInstance();
         formatter1 = new NumberFormatter(format1);
         formatter1.setValueClass(Integer.class);
-        formatter1.setMinimum(-1);
+        formatter1.setMinimum(0);
         formatter1.setMaximum(Integer.MAX_VALUE);
         formatter1.setAllowsInvalid(true);
         formatter1.setCommitsOnValidEdit(true);
@@ -80,15 +73,16 @@ public class FundsTransfer implements ActionListener {
         l4.setBounds(120,520,350,30);
         jf.add(l4);
 
+        txt1 = new JTextField();
+        txt1.setBounds(520,400,300,30);
+        txt1.setFont(new Font("Times New Roman",Font.BOLD,30));
+        jf.add(txt1);
+
         txt2 = new JFormattedTextField(formatter1);
-        txt2.setFont(new Font("Times New Roman",Font.BOLD,35));
+        txt2.setFont(new Font("Times New Roman",Font.BOLD,30));
         txt2.setBounds(520,520,300,30);
         jf.add(txt2);
 
-        txt1 = new JFormattedTextField(formatter);
-        txt1.setBounds(520,400,300,30);
-        txt1.setFont(new Font("Times New Roman",Font.BOLD,35));
-        jf.add(txt1);
 
         b1 = new JButton("Transfer",new ImageIcon("ok.png"));
         b1.setFont(f);
