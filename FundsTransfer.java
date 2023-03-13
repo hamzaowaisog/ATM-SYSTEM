@@ -12,13 +12,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class FundsTransfer implements ActionListener {
+public class FundsTransfer extends JFrame implements ActionListener {
     public static void main(String[] args) {
         new FundsTransfer(1000, 10001, 1234, "saving");
     }
     JButton b1,b2,b3;
     JFormattedTextField txt2;
-    JTextField txt1;
+    JTextField txt1,txt3;
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
@@ -41,8 +41,6 @@ public class FundsTransfer implements ActionListener {
         formatter1.setValueClass(Integer.class);
         formatter1.setMinimum(0);
         formatter1.setMaximum(Integer.MAX_VALUE);
-        formatter1.setAllowsInvalid(true);
-        formatter1.setCommitsOnValidEdit(true);
 
         jf = new JFrame();
         ImageIcon img1 = new ImageIcon("meezan-bank-vector-logo.png");
@@ -84,6 +82,11 @@ public class FundsTransfer implements ActionListener {
         txt2.setBounds(520,520,300,30);
         jf.add(txt2);
 
+        /*txt3 = new JTextField();
+        txt3.setBounds(520,520,300,30);
+        txt3.setFont(new Font("Times New Roman",Font.BOLD,30));
+        jf.add(txt3);*/
+
 
         b1 = new JButton("Transfer",new ImageIcon("ok.png"));
         b1.setFont(f);
@@ -121,6 +124,23 @@ public class FundsTransfer implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==b1){
+            if(txt1.getText().equals("")){
+                JOptionPane.showMessageDialog(this, "Enter Account number","Warning!",JOptionPane.WARNING_MESSAGE);
+            }
+           else if(txt2.getText().equals("")){
+                JOptionPane.showMessageDialog(this, "Enter Transfer amount","Warning!",JOptionPane.WARNING_MESSAGE);
+            }
+           else{
+               String amount;
+               int amount1 =0;
+               int amount2 =0;
+               int amount3 =0;
+               amount = txt2.getText();
+               amount = amount.replaceAll(",", "");
+               amount1 = Integer.parseInt(amount);
+               System.out.println("Your Enter amount is "+amount1);
+
+            }
 
         }
         if(e.getSource()==b2){
