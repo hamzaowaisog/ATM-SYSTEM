@@ -3,6 +3,7 @@ import javax.swing.text.NumberFormatter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -119,6 +120,21 @@ public class FundsTransfer implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==b1){
+
+        }
+        if(e.getSource()==b2){
+            new TransactionMenu(atmno, acno, pno, actype);
+            jf.setVisible(false);
+        }
+        if(e.getSource()==b3){
+            try {
+                new Welcome();
+                jf.setVisible(false);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
 
     }
 }
