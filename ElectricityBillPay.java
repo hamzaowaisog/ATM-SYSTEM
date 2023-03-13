@@ -1,4 +1,3 @@
-import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -139,7 +138,7 @@ public class ElectricityBillPay extends JFrame implements ActionListener {
             giv_am = Float.parseFloat(txt1.getText());
             System.out.println("you enter bill amount is "+giv_am);
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/atmdb","root","root");
                 System.out.println("Connect to database");
                 ps = con.prepareStatement("select * from accountdetail where atmno='"+atmno+"' and accno='"+acno+"' and pinno='"+pino+"' and acctype='"+actype+"'");

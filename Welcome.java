@@ -1,6 +1,3 @@
-import javafx.scene.shape.Line;
-import org.jetbrains.annotations.NotNull;
-import sun.java2d.loops.DrawLine;
 
 import javax.swing.*;
 import java.awt.*;

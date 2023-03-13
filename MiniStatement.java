@@ -138,7 +138,7 @@ public class MiniStatement extends JFrame implements ActionListener {
         jf.getContentPane().setBackground(new Color(0x939393));
 
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/atmdb","root","root");
             System.out.println("Connected to Databse.");
             ps=con.prepareStatement("select * from transaction where atmno='"+atmno+"' and accno='"+acno+"' order by trid desc limit 11",ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
