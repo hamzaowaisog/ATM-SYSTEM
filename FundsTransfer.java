@@ -4,9 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.text.NumberFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -139,6 +137,36 @@ public class FundsTransfer extends JFrame implements ActionListener {
                amount = amount.replaceAll(",", "");
                amount1 = Integer.parseInt(amount);
                System.out.println("Your Enter amount is "+amount1);
+
+               int ac_no ;
+               ac_no = Integer.parseInt(txt1.getText());
+               boolean found =false;
+
+                try {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/atmdb","root","root");
+                    System.out.println("Connected to database");
+                    ps = con.prepareStatement("select * from fundtrans where accno="+ac_no);
+                    rs = ps.executeQuery();
+                    while (rs.next()) {
+                        ac_no = rs.getInt(1);
+                        System.out.println(ac_no);
+                        amount2 = rs.getInt(2);
+                        String date = rs.getString(3);
+                        System.out.println(amount2);
+                        System.out.println(date);
+                        found =true;
+                    }
+
+
+                } catch (ClassNotFoundException | SQLException ex) {
+                    ex.printStackTrace();
+                }
+                if(!found){
+                    JOptionPane.showMessageDialog(this, "Invalid account no","Warning",JOptionPane.WARNING_MESSAGE);
+                }
+
+
 
             }
 
