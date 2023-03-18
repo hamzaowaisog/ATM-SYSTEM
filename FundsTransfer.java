@@ -42,6 +42,7 @@ public class FundsTransfer extends JFrame implements ActionListener {
 
         jf = new JFrame();
         ImageIcon img1 = new ImageIcon("meezan-bank-vector-logo.png");
+
         Date date = new Date();
         GregorianCalendar calender = new GregorianCalendar();
         calender.setTime(date);
@@ -169,13 +170,18 @@ public class FundsTransfer extends JFrame implements ActionListener {
                     ps = con.prepareStatement("select * from accountdetail where atmno='" + atmno + "' and accno='" + acno + "' and pinno='" + pno + "' and acctype='" + actype + "'");
                     rs = ps.executeQuery();
                     while(rs.next()){
-                        acc_am = rs.getInt("balance");
+                        acc_am = (int)rs.getFloat("balance");
+                        System.out.println(acc_am);
                     }
-                    if(acc_am < amount1){
+                    if(acc_am > amount1){
                         amount3 = amount2+amount1;
                         acc_am = acc_am-amount1;
-                        ps = con.prepareStatement()
-
+                        System.out.println(acc_am);
+                        ps = con.prepareStatement("update accountdetail set balance=" + acc_am + " where atmno='" + atmno + "'");
+                        System.out.println("Your remaining balance is= " +acc_am);
+                        ps.executeUpdate();
+                        ps = con.prepareStatement("insert into transaction(atmno,accno,depositamt,withdrawal,avbalance,tdate) values ('" + atmno + "','" + acno + "',0,'" + amount1 + "','" + acc_am + "','" + curdate + "')");
+                        ps.executeUpdate();
                     }
                     else{
                         JOptionPane.showMessageDialog(this,"you have Insufficient balance","Warning",JOptionPane.WARNING_MESSAGE);
