@@ -133,6 +133,9 @@ public class FundsTransfer extends JFrame implements ActionListener {
                int amount1 =0;
                int amount2 =0;
                int amount3 =0;
+               int acc_am =0;
+               String name;
+               String date;
                amount = txt2.getText();
                amount = amount.replaceAll(",", "");
                amount1 = Integer.parseInt(amount);
@@ -152,19 +155,40 @@ public class FundsTransfer extends JFrame implements ActionListener {
                         ac_no = rs.getInt(1);
                         System.out.println(ac_no);
                         amount2 = rs.getInt(2);
-                        String date = rs.getString(3);
+                        date = rs.getString(3);
+                        name = rs.getString(4);
                         System.out.println(amount2);
                         System.out.println(date);
+                        System.out.println(name);
                         found =true;
                     }
+                    if(!found){
+                        JOptionPane.showMessageDialog(this, "Invalid account no","Warning",JOptionPane.WARNING_MESSAGE);
+                    }
+
+                    ps = con.prepareStatement("select * from accountdetail where atmno='" + atmno + "' and accno='" + acno + "' and pinno='" + pno + "' and acctype='" + actype + "'");
+                    rs = ps.executeQuery();
+                    while(rs.next()){
+                        acc_am = rs.getInt("balance");
+                    }
+                    if(acc_am < amount1){
+                        amount3 = amount2+amount1;
+                        acc_am = acc_am-amount1;
+                        ps = con.prepareStatement()
+
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(this,"you have Insufficient balance","Warning",JOptionPane.WARNING_MESSAGE);
+
+                    }
+
+
 
 
                 } catch (ClassNotFoundException | SQLException ex) {
                     ex.printStackTrace();
                 }
-                if(!found){
-                    JOptionPane.showMessageDialog(this, "Invalid account no","Warning",JOptionPane.WARNING_MESSAGE);
-                }
+
 
 
 
