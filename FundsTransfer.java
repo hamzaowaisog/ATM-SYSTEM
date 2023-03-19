@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class FundsTransfer extends JFrame implements ActionListener {
-    
+
     JButton b1,b2,b3;
     JFormattedTextField txt2;
     JTextField txt1,txt3;
@@ -187,7 +187,7 @@ public class FundsTransfer extends JFrame implements ActionListener {
                         ps.setString(1, curdate);
                         ps.setInt(2, ac_no);
                         ps.executeUpdate();
-                        JOptionPane.showMessageDialog(this, "Funds of Rupees "+amount1+" Successfully transferred to "+name+" date"+curdate,"Success",JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "Funds of Rupees "+amount1+" Successfully transferred to "+name+" date "+curdate,"Success",JOptionPane.INFORMATION_MESSAGE);
                         new BalanceEnquiry(atmno, acno, pno, actype);
                         jf.setVisible(false);
 
