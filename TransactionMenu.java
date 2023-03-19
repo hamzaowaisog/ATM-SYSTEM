@@ -72,7 +72,7 @@ public class TransactionMenu extends JFrame implements ActionListener {
         b5.setFont(f);
         jf.add(b5);
 
-        b6 = new JButton("Loan Information ");
+        b6 = new JButton("Funds Transfer ");
         b6.setFont(f);
         b6.setBounds(550,550,250,50);
         b6.addActionListener(this);
@@ -146,7 +146,7 @@ public class TransactionMenu extends JFrame implements ActionListener {
             jf.setVisible(false);
         }
         else if (e.getSource() == b6){
-            new LoanInformation(atmno,acno,pino,actype);
+            new FundsTransfer(atmno,acno,pino,actype);
             jf.setVisible(false);
         }
         else if (e.getSource()==b7){
