@@ -11,9 +11,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class FundsTransfer extends JFrame implements ActionListener {
-    public static void main(String[] args) {
-        new FundsTransfer(1000, 10001, 1234, "saving");
-    }
+    
     JButton b1,b2,b3;
     JFormattedTextField txt2;
     JTextField txt1,txt3;
