@@ -8,11 +8,11 @@ package DIAGRAM;
 /**
  * 
  */
-public class TransactionMenu {
+public class CashWithdrawal {
 	/**
 	 * 
 	 */
-	public String acctype;
+	public int pno;
 	/**
 	 * 
 	 */
@@ -24,37 +24,25 @@ public class TransactionMenu {
 	/**
 	 * 
 	 */
-	public int pno;
+	public String acctype;
 	/**
 	 * 
 	 */
-	public CashWithdrawal cashwithdrawal;
+	public String StartDate;
 	/**
 	 * 
 	 */
-	public CashDeposit cashdeposit;
+	public float giv_am;
 	/**
 	 * 
 	 */
-	public FundsTransfer fundstransfer;
+	public float amt;
 	/**
 	 * 
 	 */
-	public Help help;
+	public float a_bal;
 	/**
 	 * 
 	 */
-	public BillPay billpay;
-	/**
-	 * 
-	 */
-	public MiniStatement ministatement;
-	/**
-	 * 
-	 */
-	public BalanceEnquiry balanceenquiry;
-	/**
-	 * 
-	 */
-	public PinChange pinchange;
+	public float atm_min;
 }

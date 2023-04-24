@@ -138,7 +138,7 @@ public class CashWithdrawal extends JFrame implements ActionListener {
                                     if (giv_am <= (a_bal - 1000)) {
                                         amt = ((a_bal - 1000) - giv_am);
                                         atm_min = (amt + 1000);
-                                        ps = con.prepareStatement("update accountdetail set balance=" + atm_min + " where atmno='" + atmno + "'");
+                                            ps = con.prepareStatement("update accountdetail set balance=" + atm_min + " where atmno='" + atmno + "'");
                                         System.out.println("You withdraw rs: " + ft1.getText());
                                         ps.executeUpdate();
                                         ps = con.prepareStatement("insert into transaction(atmno,accno,depositamt,withdrawal,avbalance,tdate) values ('" + atmno + "','" + acno + "',0,'" + giv_am + "','" + atm_min + "','" + strdate + "')");
