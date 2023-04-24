@@ -1,36 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_PuxVkOJFEe2YwLsqUgTMvQ" name="DIAGRAM">
-  <packageImport xmi:type="uml:PackageImport" xmi:id="_P4pDQOJFEe2YwLsqUgTMvQ">
-    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
-  </packageImport>
-  <packagedElement xmi:type="uml:Activity" xmi:id="_Lfm7kOJHEe2YwLsqUgTMvQ" name="Login" node="_RC9PYOJHEe2YwLsqUgTMvQ _TNgbYOJHEe2YwLsqUgTMvQ _VCPIYOJHEe2YwLsqUgTMvQ _YRTFYOJHEe2YwLsqUgTMvQ _f2-dUOJHEe2YwLsqUgTMvQ _kZzIQOJHEe2YwLsqUgTMvQ _mP1c0OJHEe2YwLsqUgTMvQ _1NjZUOJHEe2YwLsqUgTMvQ _T48oQOJLEe2YwLsqUgTMvQ">
-    <edge xmi:type="uml:ControlFlow" xmi:id="_cLu6oOJHEe2YwLsqUgTMvQ" target="_TNgbYOJHEe2YwLsqUgTMvQ" source="_RC9PYOJHEe2YwLsqUgTMvQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_ebbFUOJHEe2YwLsqUgTMvQ" target="_VCPIYOJHEe2YwLsqUgTMvQ" source="_TNgbYOJHEe2YwLsqUgTMvQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_haLVcOJHEe2YwLsqUgTMvQ" name="[Check Acc no]" target="_f2-dUOJHEe2YwLsqUgTMvQ" source="_VCPIYOJHEe2YwLsqUgTMvQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_o-A6UOJHEe2YwLsqUgTMvQ" name="[Valid Acc no]" target="_YRTFYOJHEe2YwLsqUgTMvQ" source="_f2-dUOJHEe2YwLsqUgTMvQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_vVpKwOJHEe2YwLsqUgTMvQ" name="[Invalid Acc no]" target="_kZzIQOJHEe2YwLsqUgTMvQ" source="_f2-dUOJHEe2YwLsqUgTMvQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_5WEG0OJHEe2YwLsqUgTMvQ" name="[Check Password]" target="_1NjZUOJHEe2YwLsqUgTMvQ" source="_YRTFYOJHEe2YwLsqUgTMvQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_7zPT4OJHEe2YwLsqUgTMvQ" name="[Valid Password]" target="_mP1c0OJHEe2YwLsqUgTMvQ" source="_1NjZUOJHEe2YwLsqUgTMvQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_APvUYOJIEe2YwLsqUgTMvQ" name="[Invalid Password]" target="_kZzIQOJHEe2YwLsqUgTMvQ" source="_1NjZUOJHEe2YwLsqUgTMvQ"/>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_FJVgkOJIEe2YwLsqUgTMvQ" target="_kZzIQOJHEe2YwLsqUgTMvQ" source="_mP1c0OJHEe2YwLsqUgTMvQ"/>
-    <node xmi:type="uml:InitialNode" xmi:id="_RC9PYOJHEe2YwLsqUgTMvQ" name="Start" outgoing="_cLu6oOJHEe2YwLsqUgTMvQ"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_TNgbYOJHEe2YwLsqUgTMvQ" name="Enter card" incoming="_cLu6oOJHEe2YwLsqUgTMvQ" outgoing="_ebbFUOJHEe2YwLsqUgTMvQ"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_VCPIYOJHEe2YwLsqUgTMvQ" name="Enter Acc no" incoming="_ebbFUOJHEe2YwLsqUgTMvQ" outgoing="_haLVcOJHEe2YwLsqUgTMvQ">
-      <handler xmi:type="uml:ExceptionHandler" xmi:id="_cf86UOJLEe2YwLsqUgTMvQ" handlerBody="_sKfgkOJLEe2YwLsqUgTMvQ"/>
-    </node>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_YRTFYOJHEe2YwLsqUgTMvQ" name="Enter password" incoming="_o-A6UOJHEe2YwLsqUgTMvQ" outgoing="_5WEG0OJHEe2YwLsqUgTMvQ">
-      <handler xmi:type="uml:ExceptionHandler" xmi:id="_kxVCAOJIEe2YwLsqUgTMvQ"/>
-      <handler xmi:type="uml:ExceptionHandler" xmi:id="_teW8MOJLEe2YwLsqUgTMvQ"/>
-    </node>
-    <node xmi:type="uml:DecisionNode" xmi:id="_f2-dUOJHEe2YwLsqUgTMvQ" name="" incoming="_haLVcOJHEe2YwLsqUgTMvQ" outgoing="_o-A6UOJHEe2YwLsqUgTMvQ _vVpKwOJHEe2YwLsqUgTMvQ"/>
-    <node xmi:type="uml:ActivityFinalNode" xmi:id="_kZzIQOJHEe2YwLsqUgTMvQ" name="End" incoming="_vVpKwOJHEe2YwLsqUgTMvQ _APvUYOJIEe2YwLsqUgTMvQ _FJVgkOJIEe2YwLsqUgTMvQ"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_mP1c0OJHEe2YwLsqUgTMvQ" name="Welcome Screen" incoming="_7zPT4OJHEe2YwLsqUgTMvQ" outgoing="_FJVgkOJIEe2YwLsqUgTMvQ"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_1NjZUOJHEe2YwLsqUgTMvQ" name="" incoming="_5WEG0OJHEe2YwLsqUgTMvQ" outgoing="_7zPT4OJHEe2YwLsqUgTMvQ _APvUYOJIEe2YwLsqUgTMvQ"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_T48oQOJLEe2YwLsqUgTMvQ" name="Reseolve Database Error">
-      <inputValue xmi:type="uml:ActionInputPin" xmi:id="_W9KAIOJLEe2YwLsqUgTMvQ" name="">
-        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_W9KnMOJLEe2YwLsqUgTMvQ" value="1"/>
-        <fromAction xmi:type="uml:OpaqueAction" xmi:id="_sKfgkOJLEe2YwLsqUgTMvQ"/>
-      </inputValue>
-    </node>
-  </packagedElement>
-</uml:Model>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_PuxVkOJFEe2YwLsqUgTMvQ" name="DIAGRAM">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_P4pDQOJFEe2YwLsqUgTMvQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Activity" xmi:id="_Lfm7kOJHEe2YwLsqUgTMvQ" name="Login" node="_RC9PYOJHEe2YwLsqUgTMvQ _TNgbYOJHEe2YwLsqUgTMvQ _VCPIYOJHEe2YwLsqUgTMvQ _YRTFYOJHEe2YwLsqUgTMvQ _f2-dUOJHEe2YwLsqUgTMvQ _kZzIQOJHEe2YwLsqUgTMvQ _mP1c0OJHEe2YwLsqUgTMvQ _1NjZUOJHEe2YwLsqUgTMvQ _T48oQOJLEe2YwLsqUgTMvQ">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_cLu6oOJHEe2YwLsqUgTMvQ" target="_TNgbYOJHEe2YwLsqUgTMvQ" source="_RC9PYOJHEe2YwLsqUgTMvQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_ebbFUOJHEe2YwLsqUgTMvQ" target="_VCPIYOJHEe2YwLsqUgTMvQ" source="_TNgbYOJHEe2YwLsqUgTMvQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_haLVcOJHEe2YwLsqUgTMvQ" name="[Check Acc no]" target="_f2-dUOJHEe2YwLsqUgTMvQ" source="_VCPIYOJHEe2YwLsqUgTMvQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_o-A6UOJHEe2YwLsqUgTMvQ" name="[Valid Acc no]" target="_YRTFYOJHEe2YwLsqUgTMvQ" source="_f2-dUOJHEe2YwLsqUgTMvQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_vVpKwOJHEe2YwLsqUgTMvQ" name="[Invalid Acc no]" target="_kZzIQOJHEe2YwLsqUgTMvQ" source="_f2-dUOJHEe2YwLsqUgTMvQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_5WEG0OJHEe2YwLsqUgTMvQ" name="[Check Password]" target="_1NjZUOJHEe2YwLsqUgTMvQ" source="_YRTFYOJHEe2YwLsqUgTMvQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_7zPT4OJHEe2YwLsqUgTMvQ" name="[Valid Password]" target="_mP1c0OJHEe2YwLsqUgTMvQ" source="_1NjZUOJHEe2YwLsqUgTMvQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_APvUYOJIEe2YwLsqUgTMvQ" name="[Invalid Password]" target="_kZzIQOJHEe2YwLsqUgTMvQ" source="_1NjZUOJHEe2YwLsqUgTMvQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_FJVgkOJIEe2YwLsqUgTMvQ" target="_kZzIQOJHEe2YwLsqUgTMvQ" source="_mP1c0OJHEe2YwLsqUgTMvQ"/>
+      <node xmi:type="uml:InitialNode" xmi:id="_RC9PYOJHEe2YwLsqUgTMvQ" name="Start" outgoing="_cLu6oOJHEe2YwLsqUgTMvQ"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_TNgbYOJHEe2YwLsqUgTMvQ" name="Enter card" incoming="_cLu6oOJHEe2YwLsqUgTMvQ" outgoing="_ebbFUOJHEe2YwLsqUgTMvQ"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_VCPIYOJHEe2YwLsqUgTMvQ" name="Enter Acc no" incoming="_ebbFUOJHEe2YwLsqUgTMvQ" outgoing="_haLVcOJHEe2YwLsqUgTMvQ">
+        <handler xmi:type="uml:ExceptionHandler" xmi:id="_cf86UOJLEe2YwLsqUgTMvQ" handlerBody="_sKfgkOJLEe2YwLsqUgTMvQ"/>
+      </node>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_YRTFYOJHEe2YwLsqUgTMvQ" name="Enter password" incoming="_o-A6UOJHEe2YwLsqUgTMvQ" outgoing="_5WEG0OJHEe2YwLsqUgTMvQ">
+        <handler xmi:type="uml:ExceptionHandler" xmi:id="_kxVCAOJIEe2YwLsqUgTMvQ"/>
+        <handler xmi:type="uml:ExceptionHandler" xmi:id="_teW8MOJLEe2YwLsqUgTMvQ"/>
+      </node>
+      <node xmi:type="uml:DecisionNode" xmi:id="_f2-dUOJHEe2YwLsqUgTMvQ" name="" incoming="_haLVcOJHEe2YwLsqUgTMvQ" outgoing="_o-A6UOJHEe2YwLsqUgTMvQ _vVpKwOJHEe2YwLsqUgTMvQ"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_kZzIQOJHEe2YwLsqUgTMvQ" name="End" incoming="_vVpKwOJHEe2YwLsqUgTMvQ _APvUYOJIEe2YwLsqUgTMvQ _FJVgkOJIEe2YwLsqUgTMvQ"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_mP1c0OJHEe2YwLsqUgTMvQ" name="Welcome Screen" incoming="_7zPT4OJHEe2YwLsqUgTMvQ" outgoing="_FJVgkOJIEe2YwLsqUgTMvQ"/>
+      <node xmi:type="uml:DecisionNode" xmi:id="_1NjZUOJHEe2YwLsqUgTMvQ" name="" incoming="_5WEG0OJHEe2YwLsqUgTMvQ" outgoing="_7zPT4OJHEe2YwLsqUgTMvQ _APvUYOJIEe2YwLsqUgTMvQ"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_T48oQOJLEe2YwLsqUgTMvQ" name="Reseolve Database Error">
+        <inputValue xmi:type="uml:ActionInputPin" xmi:id="_W9KAIOJLEe2YwLsqUgTMvQ" name="">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_W9KnMOJLEe2YwLsqUgTMvQ" value="1"/>
+          <fromAction xmi:type="uml:OpaqueAction" xmi:id="_sKfgkOJLEe2YwLsqUgTMvQ"/>
+        </inputValue>
+      </node>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5kDisOJLEe2YwLsqUgTMvQ" name="ATM">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7CbvweJMEe2YwLsqUgTMvQ" name="welcome" type="_7GVNwOJLEe2YwLsqUgTMvQ" aggregation="composite" association="_7CbIsOJMEe2YwLsqUgTMvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7CbvwuJMEe2YwLsqUgTMvQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7Cbvw-JMEe2YwLsqUgTMvQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7GVNwOJLEe2YwLsqUgTMvQ" name="Welcome">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5TdQAOJNEe2YwLsqUgTMvQ" name="atmcardno" type="_sEX_kOJNEe2YwLsqUgTMvQ" association="_5TazwOJNEe2YwLsqUgTMvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5Td3EOJNEe2YwLsqUgTMvQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5TeeIOJNEe2YwLsqUgTMvQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7CbIsOJMEe2YwLsqUgTMvQ" memberEnd="_7CbvweJMEe2YwLsqUgTMvQ _7CbvxOJMEe2YwLsqUgTMvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7CbIseJMEe2YwLsqUgTMvQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7CbvwOJMEe2YwLsqUgTMvQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_7CbvxOJMEe2YwLsqUgTMvQ" name="atm" type="_5kDisOJLEe2YwLsqUgTMvQ" association="_7CbIsOJMEe2YwLsqUgTMvQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nQc9kOJNEe2YwLsqUgTMvQ" name="AccountType"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_sEX_kOJNEe2YwLsqUgTMvQ" name="AtmCardno">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ufuAoOJNEe2YwLsqUgTMvQ" name="Accno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xFz5IOJNEe2YwLsqUgTMvQ" name="atmno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xcxAkOJNEe2YwLsqUgTMvQ" name="pno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_95Bs8eJNEe2YwLsqUgTMvQ" name="accounttype" type="_nQc9kOJNEe2YwLsqUgTMvQ" association="_95Ae0OJNEe2YwLsqUgTMvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_95Bs8uJNEe2YwLsqUgTMvQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_95CUAOJNEe2YwLsqUgTMvQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_5TazwOJNEe2YwLsqUgTMvQ" memberEnd="_5TdQAOJNEe2YwLsqUgTMvQ _5TeeIeJNEe2YwLsqUgTMvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5Tco8OJNEe2YwLsqUgTMvQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5Tco8eJNEe2YwLsqUgTMvQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_5TeeIeJNEe2YwLsqUgTMvQ" name="welcome" type="_7GVNwOJLEe2YwLsqUgTMvQ" association="_5TazwOJNEe2YwLsqUgTMvQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_95Ae0OJNEe2YwLsqUgTMvQ" memberEnd="_95Bs8eJNEe2YwLsqUgTMvQ _95CUAeJNEe2YwLsqUgTMvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_95BF4OJNEe2YwLsqUgTMvQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_95Bs8OJNEe2YwLsqUgTMvQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_95CUAeJNEe2YwLsqUgTMvQ" name="atmcardno" type="_sEX_kOJNEe2YwLsqUgTMvQ" association="_95Ae0OJNEe2YwLsqUgTMvQ"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_p4OGgOJMEe2YwLsqUgTMvQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_p4Rw4OJMEe2YwLsqUgTMvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Codegen:GeneratorHint xmi:id="_p4YekOJMEe2YwLsqUgTMvQ" base_Element="_PuxVkOJFEe2YwLsqUgTMvQ" generatorID="Standard Java">
+    <language xmi:type="Codegen:Language" href="pathmap://Codegen_PROFILES/languages.uml#_2Zt6YCjREeayco6FJ_OtTQ"/>
+  </Codegen:GeneratorHint>
+</xmi:XMI>
