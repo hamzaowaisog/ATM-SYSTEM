@@ -152,8 +152,58 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_bw24UOJOEe2YwLsqUgTMvQ" name="accounttype" type="_nQc9kOJNEe2YwLsqUgTMvQ" association="_bwx_0OJOEe2YwLsqUgTMvQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_6M_DkOJOEe2YwLsqUgTMvQ" name="CashWithdrawal"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Ag4DgOJPEe2YwLsqUgTMvQ" name="CashDeposit"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6M_DkOJOEe2YwLsqUgTMvQ" name="CashWithdrawal">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_q7n84OJPEe2YwLsqUgTMvQ" name="pno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_q7pyEOJPEe2YwLsqUgTMvQ" name="atmno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_q7rAMOJPEe2YwLsqUgTMvQ" name="Accno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_q7sOUOJPEe2YwLsqUgTMvQ" name="acctype">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_t2fykOJPEe2YwLsqUgTMvQ" name="StartDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wqPskOJPEe2YwLsqUgTMvQ" name="giv_am">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7L2DEOJPEe2YwLsqUgTMvQ" name="amt">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7WmhkOJPEe2YwLsqUgTMvQ" name="a_bal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AuU0MOJQEe2YwLsqUgTMvQ" name="atm_min">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ag4DgOJPEe2YwLsqUgTMvQ" name="CashDeposit">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YEaw4OJQEe2YwLsqUgTMvQ" name="Accno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YEfCUOJQEe2YwLsqUgTMvQ" name="acctype">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YEhekOJQEe2YwLsqUgTMvQ" name="atmno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YEjTwOJQEe2YwLsqUgTMvQ" name="pno">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bH03gOJQEe2YwLsqUgTMvQ" name="giv_am">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bH360OJQEe2YwLsqUgTMvQ" name="StartDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bH6XEOJQEe2YwLsqUgTMvQ" name="amt">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Bz9cAOJPEe2YwLsqUgTMvQ" name="FundsTransfer"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_DkKOUOJPEe2YwLsqUgTMvQ" name="Help"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_E7xhgOJPEe2YwLsqUgTMvQ" name="BillPay"/>

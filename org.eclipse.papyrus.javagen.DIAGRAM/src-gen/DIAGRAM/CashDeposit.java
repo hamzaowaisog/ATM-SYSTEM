@@ -8,15 +8,7 @@ package DIAGRAM;
 /**
  * 
  */
-public class CashWithdrawal {
-	/**
-	 * 
-	 */
-	public int pno;
-	/**
-	 * 
-	 */
-	public int atmno;
+public class CashDeposit {
 	/**
 	 * 
 	 */
@@ -28,7 +20,11 @@ public class CashWithdrawal {
 	/**
 	 * 
 	 */
-	public String StartDate;
+	public int atmno;
+	/**
+	 * 
+	 */
+	public int pno;
 	/**
 	 * 
 	 */
@@ -36,15 +32,9 @@ public class CashWithdrawal {
 	/**
 	 * 
 	 */
+	public String StartDate;
+	/**
+	 * 
+	 */
 	public float amt;
-	/**
-	 * 
-	 */
-	public float a_bal;
-	/**
-	 * 
-	 */
-	public float atm_min;
-	
-	public Date date;
 }
