@@ -164,37 +164,38 @@ public class FundsTransfer extends JFrame implements ActionListener {
                     if(!found){
                         JOptionPane.showMessageDialog(this, "Invalid account no","Warning",JOptionPane.WARNING_MESSAGE);
                     }
+                    else {
 
-                    ps = con.prepareStatement("select * from accountdetail where atmno='" + atmno + "' and accno='" + acno + "' and pinno='" + pno + "' and acctype='" + actype + "'");
-                    rs = ps.executeQuery();
-                    while(rs.next()){
-                        acc_am = (int)rs.getFloat("balance");
-                        System.out.println(acc_am);
-                    }
-                    if(acc_am > amount1){
-                        amount3 = amount2+amount1;
-                        acc_am = acc_am-amount1;
-                        System.out.println(acc_am);
-                        System.out.println(amount3);
-                        ps = con.prepareStatement("update accountdetail set balance=" + acc_am + " where atmno='" + atmno + "'");
-                        System.out.println("Your remaining balance is= " +acc_am);
-                        ps.executeUpdate();
-                        ps = con.prepareStatement("insert into transaction(atmno,accno,depositamt,withdrawal,avbalance,tdate) values ('" + atmno + "','" + acno + "',0,'" + amount1 + "','" + acc_am + "','" + curdate + "')");
-                        ps.executeUpdate();
-                        ps = con.prepareStatement("update fundtrans set amount=" + amount3 + " where accno='" + ac_no + "'");
-                        ps.executeUpdate();
-                        ps = con.prepareStatement("UPDATE fundtrans SET transdate = ? WHERE accno = ?");
-                        ps.setString(1, curdate);
-                        ps.setInt(2, ac_no);
-                        ps.executeUpdate();
-                        JOptionPane.showMessageDialog(this, "Funds of Rupees "+amount1+" Successfully transferred to "+name+" date "+curdate,"Success",JOptionPane.INFORMATION_MESSAGE);
-                        new BalanceEnquiry(atmno, acno, pno, actype);
-                        jf.setVisible(false);
+                        ps = con.prepareStatement("select * from accountdetail where atmno='" + atmno + "' and accno='" + acno + "' and pinno='" + pno + "' and acctype='" + actype + "'");
+                        rs = ps.executeQuery();
+                        while (rs.next()) {
+                            acc_am = (int) rs.getFloat("balance");
+                            System.out.println(acc_am);
+                        }
+                        if (acc_am > amount1) {
+                            amount3 = amount2 + amount1;
+                            acc_am = acc_am - amount1;
+                            System.out.println(acc_am);
+                            System.out.println(amount3);
+                            ps = con.prepareStatement("update accountdetail set balance=" + acc_am + " where atmno='" + atmno + "'");
+                            System.out.println("Your remaining balance is= " + acc_am);
+                            ps.executeUpdate();
+                            ps = con.prepareStatement("insert into transaction(atmno,accno,depositamt,withdrawal,avbalance,tdate) values ('" + atmno + "','" + acno + "',0,'" + amount1 + "','" + acc_am + "','" + curdate + "')");
+                            ps.executeUpdate();
+                            ps = con.prepareStatement("update fundtrans set amount=" + amount3 + " where accno='" + ac_no + "'");
+                            ps.executeUpdate();
+                            ps = con.prepareStatement("UPDATE fundtrans SET transdate = ? WHERE accno = ?");
+                            ps.setString(1, curdate);
+                            ps.setInt(2, ac_no);
+                            ps.executeUpdate();
+                            JOptionPane.showMessageDialog(this, "Funds of Rupees " + amount1 + " Successfully transferred to " + name + " date " + curdate, "Success", JOptionPane.INFORMATION_MESSAGE);
+                            new BalanceEnquiry(atmno, acno, pno, actype);
+                            jf.setVisible(false);
 
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(this,"you have Insufficient balance","Warning",JOptionPane.WARNING_MESSAGE);
+                        } else {
+                            JOptionPane.showMessageDialog(this, "you have Insufficient balance", "Warning", JOptionPane.WARNING_MESSAGE);
 
+                        }
                     }
 
 
