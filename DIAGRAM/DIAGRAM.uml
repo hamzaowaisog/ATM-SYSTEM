@@ -247,6 +247,10 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tHfe4OS9Ee2nJ6C_FDhoAQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tHgF8OS9Ee2nJ6C_FDhoAQ" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_26hCseS-Ee2nJ6C_FDhoAQ" name="atm" type="_OIO78OS-Ee2nJ6C_FDhoAQ" association="_26fNgOS-Ee2nJ6C_FDhoAQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_26hpwOS-Ee2nJ6C_FDhoAQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_26iQ0OS-Ee2nJ6C_FDhoAQ" value="1"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_HrzV8OS8Ee2nJ6C_FDhoAQ" name="VerifyPin" visibility="public" concurrency="guarded">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_NsFdYOS8Ee2nJ6C_FDhoAQ" name="PinNo">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -267,6 +271,10 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vTdAIOS9Ee2nJ6C_FDhoAQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vTdnMOS9Ee2nJ6C_FDhoAQ" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_u2logOS-Ee2nJ6C_FDhoAQ" name="atm" type="_OIO78OS-Ee2nJ6C_FDhoAQ" aggregation="shared" association="_u2jzUOS-Ee2nJ6C_FDhoAQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u2m2oOS-Ee2nJ6C_FDhoAQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u2m2oeS-Ee2nJ6C_FDhoAQ" value="*"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_JvFm4OS9Ee2nJ6C_FDhoAQ" name="manages"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_KdaFcOS9Ee2nJ6C_FDhoAQ" name="maintain"/>
     </packagedElement>
@@ -276,6 +284,10 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_i5mHgOS9Ee2nJ6C_FDhoAQ" name="Balance">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HriI0OS_Ee2nJ6C_FDhoAQ" name="atm transaction" type="_-E_FUOS-Ee2nJ6C_FDhoAQ" association="_HrfFgOS_Ee2nJ6C_FDhoAQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HriI0eS_Ee2nJ6C_FDhoAQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HriI0uS_Ee2nJ6C_FDhoAQ" value="*"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_mTKrYOS9Ee2nJ6C_FDhoAQ" name="CreateTransaction"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_n95u4OS9Ee2nJ6C_FDhoAQ" name="Deposit"/>
@@ -305,6 +317,49 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_EV100OS-Ee2nJ6C_FDhoAQ" name="CurrentAmount">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
       </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OIO78OS-Ee2nJ6C_FDhoAQ" name="ATM">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PVziUOS-Ee2nJ6C_FDhoAQ" name="Location">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_U1mL0OS-Ee2nJ6C_FDhoAQ" name="Atm_no">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bSzf0OS-Ee2nJ6C_FDhoAQ" name="CashWithdraw"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_cIxegOS-Ee2nJ6C_FDhoAQ" name="CashDeposit"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_kwmP8OS-Ee2nJ6C_FDhoAQ" name="FundsTransfer"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_l27l4OS-Ee2nJ6C_FDhoAQ" name="PinChange"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nBdfUOS-Ee2nJ6C_FDhoAQ" name="BillPaid"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_u2jzUOS-Ee2nJ6C_FDhoAQ" name="Has" memberEnd="_u2logOS-Ee2nJ6C_FDhoAQ _u2ndsOS-Ee2nJ6C_FDhoAQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_u2lBcOS-Ee2nJ6C_FDhoAQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_u2lBceS-Ee2nJ6C_FDhoAQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_u2ndsOS-Ee2nJ6C_FDhoAQ" name="bank" type="_V0eg0OS8Ee2nJ6C_FDhoAQ" association="_u2jzUOS-Ee2nJ6C_FDhoAQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_26fNgOS-Ee2nJ6C_FDhoAQ" name="Can visit" memberEnd="_26hCseS-Ee2nJ6C_FDhoAQ _26iQ0eS-Ee2nJ6C_FDhoAQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_26gboOS-Ee2nJ6C_FDhoAQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_26hCsOS-Ee2nJ6C_FDhoAQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_26iQ0eS-Ee2nJ6C_FDhoAQ" name="customer" type="_0IxbMOS7Ee2nJ6C_FDhoAQ" association="_26fNgOS-Ee2nJ6C_FDhoAQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-E_FUOS-Ee2nJ6C_FDhoAQ" name="ATM Transaction">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_EXiBcOS_Ee2nJ6C_FDhoAQ" name="TransactionID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OIN4YOS_Ee2nJ6C_FDhoAQ" name="Date">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q31gUOS_Ee2nJ6C_FDhoAQ" name="Type">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SlswUOS_Ee2nJ6C_FDhoAQ" name="Amount"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_HrfFgOS_Ee2nJ6C_FDhoAQ" name="Can Make" visibility="public" memberEnd="_HriI0OS_Ee2nJ6C_FDhoAQ _Hriv4OS_Ee2nJ6C_FDhoAQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Hrg6sOS_Ee2nJ6C_FDhoAQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HrhhwOS_Ee2nJ6C_FDhoAQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Hriv4OS_Ee2nJ6C_FDhoAQ" name="account" type="_SaOLAOS9Ee2nJ6C_FDhoAQ" association="_HrfFgOS_Ee2nJ6C_FDhoAQ"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_p4OGgOJMEe2YwLsqUgTMvQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_p4Rw4OJMEe2YwLsqUgTMvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
