@@ -664,6 +664,10 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-FA6h-S-Ee2nJ6C_FDhoAQ"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_-FA6iOS-Ee2nJ6C_FDhoAQ" type="Class_OperationCompartment">
+        <children xmi:type="notation:Shape" xmi:id="_j3V3QOS_Ee2nJ6C_FDhoAQ" type="Operation_ClassOperationLabel">
+          <element xmi:type="uml:Operation" href="DIAGRAM.uml#_j3DjYOS_Ee2nJ6C_FDhoAQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_j3V3QeS_Ee2nJ6C_FDhoAQ"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_-FA6ieS-Ee2nJ6C_FDhoAQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_-FA6iuS-Ee2nJ6C_FDhoAQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_-FA6i-S-Ee2nJ6C_FDhoAQ"/>

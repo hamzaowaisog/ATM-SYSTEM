@@ -354,6 +354,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_SlswUOS_Ee2nJ6C_FDhoAQ" name="Amount"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_j3DjYOS_Ee2nJ6C_FDhoAQ" name="Modifies"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_HrfFgOS_Ee2nJ6C_FDhoAQ" name="Can Make" visibility="public" memberEnd="_HriI0OS_Ee2nJ6C_FDhoAQ _Hriv4OS_Ee2nJ6C_FDhoAQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Hrg6sOS_Ee2nJ6C_FDhoAQ" source="org.eclipse.papyrus">
