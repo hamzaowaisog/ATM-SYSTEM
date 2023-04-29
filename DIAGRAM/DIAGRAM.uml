@@ -362,6 +362,60 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_Hriv4OS_Ee2nJ6C_FDhoAQ" name="account" type="_SaOLAOS9Ee2nJ6C_FDhoAQ" association="_HrfFgOS_Ee2nJ6C_FDhoAQ"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_aiafAOYOEe2Np5dHw6PTrQ" name="Interaction23"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_ihRzAOYOEe2Np5dHw6PTrQ" name="ATM">
+      <region xmi:type="uml:Region" xmi:id="_i65M4OYOEe2Np5dHw6PTrQ" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_-mfxQOYOEe2Np5dHw6PTrQ" source="_pUWpUOYOEe2Np5dHw6PTrQ" target="_rfSP0OYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_HoumwOYPEe2Np5dHw6PTrQ" name="Turn off" source="_vYCqEOYOEe2Np5dHw6PTrQ" target="_rfSP0OYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_L92M4OYPEe2Np5dHw6PTrQ" name="Turn on" source="_rfSP0OYOEe2Np5dHw6PTrQ" target="_zPxJkOYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_UXoiUOYPEe2Np5dHw6PTrQ" name="Turn off" source="_6cnx0OYOEe2Np5dHw6PTrQ" target="_rfSP0OYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_afB-YOYPEe2Np5dHw6PTrQ" name="Service" source="_vYCqEOYOEe2Np5dHw6PTrQ" target="_2vFwIOYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_r407wOYPEe2Np5dHw6PTrQ" name="Failure" source="_zPxJkOYOEe2Np5dHw6PTrQ" target="_6cnx0OYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_7p3yoOYPEe2Np5dHw6PTrQ" name="Failure" source="_2vFwIOYOEe2Np5dHw6PTrQ" target="_6cnx0OYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_jyMWYOYQEe2Np5dHw6PTrQ" name="Service" source="_6cnx0OYOEe2Np5dHw6PTrQ" target="_2vFwIOYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_xMO5oOYQEe2Np5dHw6PTrQ" source="_zPxJkOYOEe2Np5dHw6PTrQ" target="_vYCqEOYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_QN4MwOYREe2Np5dHw6PTrQ" name="Failure" source="_92_VAOYQEe2Np5dHw6PTrQ" target="_6cnx0OYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_TS9HUOYREe2Np5dHw6PTrQ" name="CardInserted" source="_vYCqEOYOEe2Np5dHw6PTrQ" target="_92_VAOYQEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_WNEIAOYREe2Np5dHw6PTrQ" name="Cancel" source="_92_VAOYQEe2Np5dHw6PTrQ" target="_vYCqEOYOEe2Np5dHw6PTrQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_9C_k4OYTEe2Np5dHw6PTrQ" name="Done with Serving" source="_92_VAOYQEe2Np5dHw6PTrQ" target="_vYCqEOYOEe2Np5dHw6PTrQ"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_pUWpUOYOEe2Np5dHw6PTrQ" name=""/>
+        <subvertex xmi:type="uml:State" xmi:id="_rfSP0OYOEe2Np5dHw6PTrQ" name="OFF"/>
+        <subvertex xmi:type="uml:State" xmi:id="_vYCqEOYOEe2Np5dHw6PTrQ" name="Idle"/>
+        <subvertex xmi:type="uml:State" xmi:id="_zPxJkOYOEe2Np5dHw6PTrQ" name="Self_Test"/>
+        <subvertex xmi:type="uml:State" xmi:id="_2vFwIOYOEe2Np5dHw6PTrQ" name="Maintenance"/>
+        <subvertex xmi:type="uml:State" xmi:id="_6cnx0OYOEe2Np5dHw6PTrQ" name="Out_Of_Service"/>
+        <subvertex xmi:type="uml:State" xmi:id="_92_VAOYQEe2Np5dHw6PTrQ" name="ServingCustomer">
+          <entry xmi:type="uml:Activity" xmi:id="_MXfKAOYREe2Np5dHw6PTrQ" name="ReadCard"/>
+          <exit xmi:type="uml:Activity" xmi:id="_OKDT0OYREe2Np5dHw6PTrQ" name="EjectCard"/>
+          <region xmi:type="uml:Region" xmi:id="_X3NVoOYREe2Np5dHw6PTrQ" name="Region3">
+            <transition xmi:type="uml:Transition" xmi:id="_yDWc8OYSEe2Np5dHw6PTrQ" source="_X3PK0OYREe2Np5dHw6PTrQ" target="_ZjjisOYREe2Np5dHw6PTrQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_8-fU0OYSEe2Np5dHw6PTrQ" name="Authentication Successful" source="_ZjjisOYREe2Np5dHw6PTrQ" target="_7OLNwOYSEe2Np5dHw6PTrQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_bHtLIOYTEe2Np5dHw6PTrQ" source="_7OLNwOYSEe2Np5dHw6PTrQ" target="_TinCAOYTEe2Np5dHw6PTrQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_iZTwgOYTEe2Np5dHw6PTrQ" name="Authnetication Unsuccessful" source="_ZjjisOYREe2Np5dHw6PTrQ" target="_fKedAOYTEe2Np5dHw6PTrQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_rA0_8OYTEe2Np5dHw6PTrQ" name="Choose another transaction" source="_TinCAOYTEe2Np5dHw6PTrQ" target="_7OLNwOYSEe2Np5dHw6PTrQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_wNxl8OYTEe2Np5dHw6PTrQ" name="Press Cancel" source="_7OLNwOYSEe2Np5dHw6PTrQ" target="_fKedAOYTEe2Np5dHw6PTrQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_z4TW8OYTEe2Np5dHw6PTrQ" name="Transaction Finshed" source="_TinCAOYTEe2Np5dHw6PTrQ" target="_fKedAOYTEe2Np5dHw6PTrQ"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_X3PK0OYREe2Np5dHw6PTrQ" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_ZjjisOYREe2Np5dHw6PTrQ" name="customerAuthentication">
+              <region xmi:type="uml:Region" xmi:id="_mkK5UOYREe2Np5dHw6PTrQ" name="Region1">
+                <transition xmi:type="uml:Transition" xmi:id="_x6jiwOYREe2Np5dHw6PTrQ" source="_mkMugOYREe2Np5dHw6PTrQ" target="_rSHPIOYREe2Np5dHw6PTrQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_CbXCoOYSEe2Np5dHw6PTrQ" name="Card not readable" source="_rSHPIOYREe2Np5dHw6PTrQ" target="_wBUJMOYREe2Np5dHw6PTrQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_bKMT4OYSEe2Np5dHw6PTrQ" name="Pin not Verified" source="_to1O4OYREe2Np5dHw6PTrQ" target="_wBUJMOYREe2Np5dHw6PTrQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_iDg8IOYSEe2Np5dHw6PTrQ" name="Card Read successfully" source="_rSHPIOYREe2Np5dHw6PTrQ" target="_to1O4OYREe2Np5dHw6PTrQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_uiXCcOYSEe2Np5dHw6PTrQ" name="Pin verified" source="_to1O4OYREe2Np5dHw6PTrQ" target="_wBUJMOYREe2Np5dHw6PTrQ"/>
+                <subvertex xmi:type="uml:Pseudostate" xmi:id="_mkMugOYREe2Np5dHw6PTrQ" name=""/>
+                <subvertex xmi:type="uml:State" xmi:id="_rSHPIOYREe2Np5dHw6PTrQ" name="ReadingCard"/>
+                <subvertex xmi:type="uml:State" xmi:id="_to1O4OYREe2Np5dHw6PTrQ" name="VerifyingPin"/>
+                <subvertex xmi:type="uml:FinalState" xmi:id="_wBUJMOYREe2Np5dHw6PTrQ" name=""/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_7OLNwOYSEe2Np5dHw6PTrQ" name="SelectingTransaction"/>
+            <subvertex xmi:type="uml:State" xmi:id="_TinCAOYTEe2Np5dHw6PTrQ" name="Transaction"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_fKedAOYTEe2Np5dHw6PTrQ" name=""/>
+          </region>
+        </subvertex>
+      </region>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_p4OGgOJMEe2YwLsqUgTMvQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_p4Rw4OJMEe2YwLsqUgTMvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>

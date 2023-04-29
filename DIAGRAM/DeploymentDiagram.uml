@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_TU_kIOYQEe2WZJSOvWOPIQ" name="projectsds">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_TW8E4OYQEe2WZJSOvWOPIQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_VffFwOYQEe2WZJSOvWOPIQ" name="Package2">
+    <packagedElement xmi:type="uml:Device" xmi:id="_gRrAgOYREe2-qKh9XRrNmg" name="DisplayScreen"/>
+    <packagedElement xmi:type="uml:Device" xmi:id="_gyengOYREe2-qKh9XRrNmg" name="Printer"/>
+    <packagedElement xmi:type="uml:Node" xmi:id="_jHU_AOYREe2-qKh9XRrNmg" name="ATM">
+      <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_HVwgEOYSEe2-qKh9XRrNmg" name="OS"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Device" xmi:id="_k_8tgOYREe2-qKh9XRrNmg" name="CardReader"/>
+    <packagedElement xmi:type="uml:Device" xmi:id="_l1hqoOYREe2-qKh9XRrNmg" name="Keypad"/>
+    <packagedElement xmi:type="uml:Device" xmi:id="_r006oOYREe2-qKh9XRrNmg" name="CashDispenser"/>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_bUA-QOYSEe2-qKh9XRrNmg" name="USB" memberEnd="_bUCMYeYSEe2-qKh9XRrNmg _bUDagOYSEe2-qKh9XRrNmg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bUBlUOYSEe2-qKh9XRrNmg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bUCMYOYSEe2-qKh9XRrNmg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bUCMYeYSEe2-qKh9XRrNmg" name="atm" type="_jHU_AOYREe2-qKh9XRrNmg" association="_bUA-QOYSEe2-qKh9XRrNmg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bUDagOYSEe2-qKh9XRrNmg" name="displayscreen" type="_gRrAgOYREe2-qKh9XRrNmg" association="_bUA-QOYSEe2-qKh9XRrNmg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_b1QqIOYSEe2-qKh9XRrNmg" name="WirelessProtocol" memberEnd="_b1R4QuYSEe2-qKh9XRrNmg _b1SfUOYSEe2-qKh9XRrNmg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b1R4QOYSEe2-qKh9XRrNmg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b1R4QeYSEe2-qKh9XRrNmg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_b1R4QuYSEe2-qKh9XRrNmg" name="atm" type="_jHU_AOYREe2-qKh9XRrNmg" association="_b1QqIOYSEe2-qKh9XRrNmg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_b1SfUOYSEe2-qKh9XRrNmg" name="printer" type="_gyengOYREe2-qKh9XRrNmg" association="_b1QqIOYSEe2-qKh9XRrNmg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_cgA3UOYSEe2-qKh9XRrNmg" name="WirelessProtocol" memberEnd="_cgCFceYSEe2-qKh9XRrNmg _cgCsgOYSEe2-qKh9XRrNmg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cgBeYOYSEe2-qKh9XRrNmg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cgCFcOYSEe2-qKh9XRrNmg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cgCFceYSEe2-qKh9XRrNmg" name="atm" type="_jHU_AOYREe2-qKh9XRrNmg" association="_cgA3UOYSEe2-qKh9XRrNmg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cgCsgOYSEe2-qKh9XRrNmg" name="cardreader" type="_k_8tgOYREe2-qKh9XRrNmg" association="_cgA3UOYSEe2-qKh9XRrNmg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_daGhAOYSEe2-qKh9XRrNmg" name="USB" memberEnd="_daHvIeYSEe2-qKh9XRrNmg _daIWMOYSEe2-qKh9XRrNmg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_daHIEOYSEe2-qKh9XRrNmg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_daHvIOYSEe2-qKh9XRrNmg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_daHvIeYSEe2-qKh9XRrNmg" name="atm" type="_jHU_AOYREe2-qKh9XRrNmg" association="_daGhAOYSEe2-qKh9XRrNmg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_daIWMOYSEe2-qKh9XRrNmg" name="keypad" type="_l1hqoOYREe2-qKh9XRrNmg" association="_daGhAOYSEe2-qKh9XRrNmg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_z6sZEOYSEe2-qKh9XRrNmg" name="WirelessProtocol" memberEnd="_z6uOQeYSEe2-qKh9XRrNmg _z6u1UOYSEe2-qKh9XRrNmg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_z6tnMOYSEe2-qKh9XRrNmg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_z6uOQOYSEe2-qKh9XRrNmg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_z6uOQeYSEe2-qKh9XRrNmg" name="atm" type="_jHU_AOYREe2-qKh9XRrNmg" association="_z6sZEOYSEe2-qKh9XRrNmg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_z6u1UOYSEe2-qKh9XRrNmg" name="cashdispenser" type="_r006oOYREe2-qKh9XRrNmg" association="_z6sZEOYSEe2-qKh9XRrNmg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_9mw1wOYSEe2-qKh9XRrNmg" name="Network"/>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_AEBiYOYTEe2-qKh9XRrNmg" name="TCP/IP" memberEnd="_AECwgOYTEe2-qKh9XRrNmg _AEDXkOYTEe2-qKh9XRrNmg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AECJcOYTEe2-qKh9XRrNmg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AECJceYTEe2-qKh9XRrNmg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AECwgOYTEe2-qKh9XRrNmg" name="node13" type="_9mw1wOYSEe2-qKh9XRrNmg" association="_AEBiYOYTEe2-qKh9XRrNmg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AEDXkOYTEe2-qKh9XRrNmg" name="bankserver" type="_1VtBsOYWEe2-qKh9XRrNmg" association="_AEBiYOYTEe2-qKh9XRrNmg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_unLbkOYTEe2-qKh9XRrNmg" name="TCP/IP" memberEnd="_unMpseYTEe2-qKh9XRrNmg _unNQwOYTEe2-qKh9XRrNmg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_unMCoOYTEe2-qKh9XRrNmg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_unMpsOYTEe2-qKh9XRrNmg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_unMpseYTEe2-qKh9XRrNmg" name="network" type="_9mw1wOYSEe2-qKh9XRrNmg" association="_unLbkOYTEe2-qKh9XRrNmg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_unNQwOYTEe2-qKh9XRrNmg" name="atm" type="_jHU_AOYREe2-qKh9XRrNmg" association="_unLbkOYTEe2-qKh9XRrNmg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_1VtBsOYWEe2-qKh9XRrNmg" name="BankServer">
+      <nestedClassifier xmi:type="uml:Node" xmi:id="_sQlCgOYREe2-qKh9XRrNmg" name="Database">
+        <nestedClassifier xmi:type="uml:Artifact" xmi:id="_jcj9QOYTEe2-qKh9XRrNmg" name="FundsTransfer.sql" fileName=""/>
+        <nestedClassifier xmi:type="uml:Artifact" xmi:id="_4r8FEOYTEe2-qKh9XRrNmg" name="AccountDetails.sql" fileName=""/>
+        <nestedClassifier xmi:type="uml:Artifact" xmi:id="_760b4OYTEe2-qKh9XRrNmg" name="ElectricityBill.sql" fileName=""/>
+        <nestedClassifier xmi:type="uml:Artifact" xmi:id="_8SAz4OYTEe2-qKh9XRrNmg" name="Transactions.sql" fileName=""/>
+      </nestedClassifier>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
