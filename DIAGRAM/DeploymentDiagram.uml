@@ -3,7 +3,7 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_TW8E4OYQEe2WZJSOvWOPIQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Package" xmi:id="_VffFwOYQEe2WZJSOvWOPIQ" name="Package2">
+  <packagedElement xmi:type="uml:Package" xmi:id="_VffFwOYQEe2WZJSOvWOPIQ" name="ATM">
     <packagedElement xmi:type="uml:Device" xmi:id="_gRrAgOYREe2-qKh9XRrNmg" name="DisplayScreen"/>
     <packagedElement xmi:type="uml:Device" xmi:id="_gyengOYREe2-qKh9XRrNmg" name="Printer"/>
     <packagedElement xmi:type="uml:Node" xmi:id="_jHU_AOYREe2-qKh9XRrNmg" name="ATM">
