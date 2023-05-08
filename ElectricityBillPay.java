@@ -132,6 +132,9 @@ public class ElectricityBillPay extends JFrame implements ActionListener {
             if(txt.getText().equals("")&& txt1.getText().equals("")){
                 JOptionPane.showMessageDialog(this,"Please enter electricity bill no and amount","Warning",JOptionPane.WARNING_MESSAGE);
             }
+            int d_bill=0;
+            int d_amount=0;
+            boolean found = false;
             float giv_am = 0;
             float amt =0;
             int billno = Integer.parseInt(txt.getText());
@@ -141,45 +144,57 @@ public class ElectricityBillPay extends JFrame implements ActionListener {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/atmdb","root","root");
                 System.out.println("Connect to database");
-                ps = con.prepareStatement("select * from accountdetail where atmno='"+atmno+"' and accno='"+acno+"' and pinno='"+pino+"' and acctype='"+actype+"'");
+                ps = con.prepareStatement("select * from billno where billno="+billno);
                 rs = ps.executeQuery();
-                while(rs.next()){
-                    float abal = Float.parseFloat(rs.getString("balance"));
-                    if(abal>1000){
-                        if(giv_am<=(abal-1000)){
-                            amt = (abal-1000)-giv_am;
-                            float amount = amt;
-                            ps = con.prepareStatement("update accountdetail set balance="+amount+" where atmno='"+atmno+"'");
-                            ps.executeUpdate();
-                            ps = con.prepareStatement("insert into transaction (atmno,accno,depositamt,withdrawal,avbalance,tdate)values('"+atmno+"','"+acno+"',0,'"+giv_am+"','"+amount+"','"+strdate+"') ");
-                            ps.executeUpdate();
-                            ps = con.prepareStatement("insert into electricitybill (atmno,accno,ebillno,ebillamount,edate)values('"+atmno+"','"+acno+"','"+billno+"','"+giv_am+"','"+strdate+"') ");
-                            ps.executeUpdate();
+                while (rs.next()) {
+                    d_bill = rs.getInt("billno");
+                    d_amount = rs.getInt("amount");
 
-                            System.out.println("You paid bill RS: "+txt1.getText());
-                            int reply=JOptionPane.showConfirmDialog(this,"your bill paid , Do you want to take the receipt","Electricity bill pay",JOptionPane.YES_NO_OPTION);
+                }
+                if(d_bill == billno && giv_am == d_amount){
+                    found = true;
+                }
+                if (found) {
+                    ps = con.prepareStatement("select * from accountdetail where atmno='" + atmno + "' and accno='" + acno + "' and pinno='" + pino + "' and acctype='" + actype + "'");
+                    rs = ps.executeQuery();
+                    while (rs.next()) {
+                        float abal = Float.parseFloat(rs.getString("balance"));
+                        if (abal > 1000) {
+                            if (giv_am <= (abal - 1000)) {
+                                amt = (abal - 1000) - giv_am;
+                                float amount = amt;
+                                ps = con.prepareStatement("update accountdetail set balance=" + amount + " where atmno='" + atmno + "'");
+                                ps.executeUpdate();
+                                ps = con.prepareStatement("insert into transaction (atmno,accno,depositamt,withdrawal,avbalance,tdate)values('" + atmno + "','" + acno + "',0,'" + giv_am + "','" + amount + "','" + strdate + "') ");
+                                ps.executeUpdate();
+                                ps = con.prepareStatement("insert into electricitybill (atmno,accno,ebillno,ebillamount,edate)values('" + atmno + "','" + acno + "','" + billno + "','" + giv_am + "','" + strdate + "') ");
+                                ps.executeUpdate();
 
-                            if(reply == JOptionPane.YES_OPTION){
-                                new ElectricityBillPaid(atmno,acno,pino,actype,billno,giv_am,strdate,strtime);
-                                jf.setVisible(false);
+                                System.out.println("You paid bill RS: " + txt1.getText());
+                                int reply = JOptionPane.showConfirmDialog(this, "your bill paid , Do you want to take the receipt", "Electricity bill pay", JOptionPane.YES_NO_OPTION);
+
+                                if (reply == JOptionPane.YES_OPTION) {
+                                    new ElectricityBillPaid(atmno, acno, pino, actype, billno, giv_am, strdate, strtime);
+                                    jf.setVisible(false);
+                                } else if (reply == JOptionPane.NO_OPTION) {
+                                    JOptionPane.showMessageDialog(this, "Your available balance is '" + amount + "'", "Electricity bill paid", JOptionPane.WARNING_MESSAGE);
+                                    new Welcome();
+                                    jf.setVisible(false);
+
+                                }
+                            } else {
+                                JOptionPane.showMessageDialog(this, "Your balance is less to pay electricity bill", "Warning", JOptionPane.WARNING_MESSAGE);
+                                txt1.setText("");
                             }
-                            else if(reply == JOptionPane.NO_OPTION){
-                                JOptionPane.showMessageDialog(this,"Your available balance is '"+amount+"'","Electricity bill paid",JOptionPane.WARNING_MESSAGE);
-                                new Welcome();
-                                jf.setVisible(false);
-
-                            }
-                        }
-                        else{
-                            JOptionPane.showMessageDialog(this,"Your balance is less to pay electricity bill","Warning",JOptionPane.WARNING_MESSAGE);
+                        } else {
+                            JOptionPane.showMessageDialog(this, "Your balance is less,You should keep minimum balance 1000 RS", "Warning", JOptionPane.WARNING_MESSAGE);
                             txt1.setText("");
                         }
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(this,"Your balance is less,You should keep minimum balance 1000 RS","Warning",JOptionPane.WARNING_MESSAGE);
-                        txt1.setText("");
-                    }
 
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Please enter correct bill no and amount" ,"ERROR",JOptionPane.ERROR_MESSAGE);
                 }
                 con.close();
 

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_8m1twMvPEe2wo7XSWqtOFQ" name="aa">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_8qNx4MvPEe2wo7XSWqtOFQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_Ta2HwOYAEe2SkM_aJAziYA" name="StateMachine2">
+    <region xmi:type="uml:Region" xmi:id="_TvMnIOYAEe2SkM_aJAziYA" name="Regio">
+      <transition xmi:type="uml:Transition" xmi:id="_7taMoOYAEe2SkM_aJAziYA" name="turn off" source="_eymqMOYAEe2SkM_aJAziYA" target="_cB42EOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_ecZ7QOYBEe2SkM_aJAziYA" source="_eF4HEOYAEe2SkM_aJAziYA" target="_djBRoOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_gGL8gOYBEe2SkM_aJAziYA" name="service" source="_eymqMOYAEe2SkM_aJAziYA" target="_eF4HEOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_g3mLUOYBEe2SkM_aJAziYA" name="cancel" source="_fUTpEOYAEe2SkM_aJAziYA" target="_eymqMOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_ml4j0OYBEe2SkM_aJAziYA" name="card inserted" source="_fUTpEOYAEe2SkM_aJAziYA" target="_eymqMOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_nqBhYOYBEe2SkM_aJAziYA" source="_eymqMOYAEe2SkM_aJAziYA" target="_fUTpEOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_3L9lQOYBEe2SkM_aJAziYA" name="failure" source="_fUTpEOYAEe2SkM_aJAziYA" target="_ebntkOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_5r5LYOYBEe2SkM_aJAziYA" name="service" source="_ebntkOYAEe2SkM_aJAziYA" target="_eF4HEOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_9wnlEOYBEe2SkM_aJAziYA" name="failure" source="_eF4HEOYAEe2SkM_aJAziYA" target="_ebntkOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="__1rNEOYBEe2SkM_aJAziYA" name="failure" source="_djBRoOYAEe2SkM_aJAziYA" target="_ebntkOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_DuiVAOYCEe2SkM_aJAziYA" name="turn off" source="_ebntkOYAEe2SkM_aJAziYA" target="_cB42EOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_M0nvwOYCEe2SkM_aJAziYA" source="_LUUaoOYCEe2SkM_aJAziYA" target="_cB42EOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_coKhAOYCEe2SkM_aJAziYA" source="_djBRoOYAEe2SkM_aJAziYA" target="_eymqMOYAEe2SkM_aJAziYA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_uU3MQOYCEe2SkM_aJAziYA" name="turn on" source="_cB42EOYAEe2SkM_aJAziYA" target="_djBRoOYAEe2SkM_aJAziYA"/>
+      <subvertex xmi:type="uml:State" xmi:id="_cB42EOYAEe2SkM_aJAziYA" name="off"/>
+      <subvertex xmi:type="uml:State" xmi:id="_djBRoOYAEe2SkM_aJAziYA" name="selfTest"/>
+      <subvertex xmi:type="uml:State" xmi:id="_eF4HEOYAEe2SkM_aJAziYA" name="maintainance"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ebntkOYAEe2SkM_aJAziYA" name="outOfService"/>
+      <subvertex xmi:type="uml:State" xmi:id="_eymqMOYAEe2SkM_aJAziYA" name="idle"/>
+      <subvertex xmi:type="uml:State" xmi:id="_fUTpEOYAEe2SkM_aJAziYA" name="servingCustomer">
+        <region xmi:type="uml:Region" xmi:id="_RMAxUOYDEe2SkM_aJAziYA" name="Region27kj">
+          <transition xmi:type="uml:Transition" xmi:id="_r8aC8OYJEe2SkM_aJAziYA" source="_Y08RkOYDEe2SkM_aJAziYA" target="_bOsXMOYDEe2SkM_aJAziYA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_cM4HoOYMEe2SkM_aJAziYA" source="_TC2PwOYGEe2SkM_aJAziYA" target="_bHCvsOYGEe2SkM_aJAziYA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_bvJNUOYNEe2SkM_aJAziYA" source="_bOsXMOYDEe2SkM_aJAziYA" target="_blUugOYDEe2SkM_aJAziYA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_gMNZEOYOEe2SkM_aJAziYA" source="_bOsXMOYDEe2SkM_aJAziYA" target="_TC2PwOYGEe2SkM_aJAziYA"/>
+          <transition xmi:type="uml:Transition" xmi:id="_gphAIOYOEe2SkM_aJAziYA" source="_blUugOYDEe2SkM_aJAziYA" target="_TC2PwOYGEe2SkM_aJAziYA"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_Y08RkOYDEe2SkM_aJAziYA" name="read card"/>
+          <subvertex xmi:type="uml:State" xmi:id="_bOsXMOYDEe2SkM_aJAziYA" name="selectingTransaction"/>
+          <subvertex xmi:type="uml:State" xmi:id="_blUugOYDEe2SkM_aJAziYA" name="customerAuthentication"/>
+          <subvertex xmi:type="uml:State" xmi:id="_TC2PwOYGEe2SkM_aJAziYA" name="transaction">
+            <region xmi:type="uml:Region" xmi:id="_TC2PweYGEe2SkM_aJAziYA" name="transaction1">
+              <transition xmi:type="uml:Transition" xmi:id="_TC2PwuYGEe2SkM_aJAziYA" source="_TC2PxuYGEe2SkM_aJAziYA" target="_TC2Px-YGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_TC2Pw-YGEe2SkM_aJAziYA" source="_TC2Px-YGEe2SkM_aJAziYA" target="_TC2PyOYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_TC2PxOYGEe2SkM_aJAziYA" source="_TC2PyOYGEe2SkM_aJAziYA" target="_TC2PyeYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_TC2PxeYGEe2SkM_aJAziYA" source="_TC2PyeYGEe2SkM_aJAziYA" target="_TC2PyuYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_kiTwQOYGEe2SkM_aJAziYA" name="card read succuessfully" source="_bHCvsOYGEe2SkM_aJAziYA" target="_bgw3QOYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_lH_3QOYGEe2SkM_aJAziYA" name="pinReadSuccesfully" source="_bgw3QOYGEe2SkM_aJAziYA" target="_b5AYIOYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_mib08OYGEe2SkM_aJAziYA" name="customerFinished" source="_cU8tQOYGEe2SkM_aJAziYA" target="_cpVo4OYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_n2vVcOYGEe2SkM_aJAziYA" name="pressedCancel" source="_b5AYIOYGEe2SkM_aJAziYA" target="_cpVo4OYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_ps_scOYGEe2SkM_aJAziYA" name="cancelPressed" source="_bgw3QOYGEe2SkM_aJAziYA" target="_cpVo4OYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_rorWAOYGEe2SkM_aJAziYA" name="card not readable" source="_bHCvsOYGEe2SkM_aJAziYA" target="_cpVo4OYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_tmUHYOYGEe2SkM_aJAziYA" name="anotherTransaction" source="_cU8tQOYGEe2SkM_aJAziYA" target="_b5AYIOYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_w0WJoOYGEe2SkM_aJAziYA" source="_wNJmwOYGEe2SkM_aJAziYA" target="_bHCvsOYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_x36C8OYHEe2SkM_aJAziYA" name="transactionChosen" source="_b5AYIOYGEe2SkM_aJAziYA" target="_cU8tQOYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_eGrFYOYNEe2SkM_aJAziYA" source="_cpVo4OYGEe2SkM_aJAziYA" target="_vr7JAOYGEe2SkM_aJAziYA"/>
+              <transition xmi:type="uml:Transition" xmi:id="_2Up24OYOEe2SkM_aJAziYA" name="tooManyPinAttempts" source="_bgw3QOYGEe2SkM_aJAziYA" target="_cpVo4OYGEe2SkM_aJAziYA"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_TC2PxuYGEe2SkM_aJAziYA" name="read card"/>
+              <subvertex xmi:type="uml:State" xmi:id="_TC2Px-YGEe2SkM_aJAziYA" name="customerAuthentication"/>
+              <subvertex xmi:type="uml:State" xmi:id="_TC2PyOYGEe2SkM_aJAziYA" name="selectingTransaction"/>
+              <subvertex xmi:type="uml:State" xmi:id="_TC2PyeYGEe2SkM_aJAziYA" name="transaction"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_TC2PyuYGEe2SkM_aJAziYA" name="eject card"/>
+              <subvertex xmi:type="uml:State" xmi:id="_bHCvsOYGEe2SkM_aJAziYA" name="readingCard"/>
+              <subvertex xmi:type="uml:State" xmi:id="_bgw3QOYGEe2SkM_aJAziYA" name="readingPin"/>
+              <subvertex xmi:type="uml:State" xmi:id="_b5AYIOYGEe2SkM_aJAziYA" name="choosingTransaction"/>
+              <subvertex xmi:type="uml:State" xmi:id="_cU8tQOYGEe2SkM_aJAziYA" name="performingTransaction"/>
+              <subvertex xmi:type="uml:State" xmi:id="_cpVo4OYGEe2SkM_aJAziYA" name="ejectingCard"/>
+              <subvertex xmi:type="uml:FinalState" xmi:id="_vr7JAOYGEe2SkM_aJAziYA" name=""/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_wNJmwOYGEe2SkM_aJAziYA" name=""/>
+            </region>
+          </subvertex>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_LUUaoOYCEe2SkM_aJAziYA" name=""/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_nX2BsOYAEe2SkM_aJAziYA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nX3P0OYAEe2SkM_aJAziYA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
