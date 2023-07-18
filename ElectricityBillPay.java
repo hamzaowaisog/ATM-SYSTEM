@@ -132,6 +132,7 @@ public class ElectricityBillPay extends JFrame implements ActionListener {
             if(txt.getText().equals("")&& txt1.getText().equals("")){
                 JOptionPane.showMessageDialog(this,"Please enter electricity bill no and amount","Warning",JOptionPane.WARNING_MESSAGE);
             }
+            int paid =0;
             int d_bill=0;
             int d_amount=0;
             boolean found = false;
@@ -149,9 +150,11 @@ public class ElectricityBillPay extends JFrame implements ActionListener {
                 while (rs.next()) {
                     d_bill = rs.getInt("billno");
                     d_amount = rs.getInt("amount");
+                    paid = rs.getInt("u_paid");
 
                 }
-                if(d_bill == billno && giv_am == d_amount){
+                if(d_bill == billno && giv_am == d_amount && paid == 0){
+                    paid =1;
                     found = true;
                 }
                 if (found) {
@@ -168,6 +171,8 @@ public class ElectricityBillPay extends JFrame implements ActionListener {
                                 ps = con.prepareStatement("insert into transaction (atmno,accno,depositamt,withdrawal,avbalance,tdate)values('" + atmno + "','" + acno + "',0,'" + giv_am + "','" + amount + "','" + strdate + "') ");
                                 ps.executeUpdate();
                                 ps = con.prepareStatement("insert into electricitybill (atmno,accno,ebillno,ebillamount,edate)values('" + atmno + "','" + acno + "','" + billno + "','" + giv_am + "','" + strdate + "') ");
+                                ps.executeUpdate();
+                                ps = con.prepareStatement("update billno set u_paid=" +paid+" where billno="+billno);
                                 ps.executeUpdate();
 
                                 System.out.println("You paid bill RS: " + txt1.getText());
